@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menu Page -->
+    <div id="menuPage" class="page active">
+        <div class="menu-container">
+            <!-- Header -->
+            <div class="menu-header">
+                <h1>Menu</h1>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search" class="search-input">
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="All">All</button>
+                <button class="category-btn" data-category="Breakfast">Breakfast</button>
+                <button class="category-btn" data-category="Lunch">Lunch</button>
+                <button class="category-btn" data-category="Treats">Treats</button>
+                <button class="category-btn" data-category="Dessert">Dessert</button>
+                <button class="category-btn" data-category="Drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Items will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Page -->
+    <div id="detailPage" class="page">
+        <div class="detail-container">
+            <!-- Detail Header -->
+            <div class="detail-header">
+                <button class="back-btn" id="backBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="detail-cart-btn" id="detailCartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+            </div>
+
+            <!-- Detail Image -->
+            <div class="detail-image-container">
+                <img id="detailImage" src="" alt="dish" class="detail-image">
+            </div>
+
+            <!-- Detail Info -->
+            <div class="detail-info">
+                <h2 id="detailName"></h2>
+                
+                <div class="detail-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="detailTime"></span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-star"></i>
+                        <span id="detailRating"></span>
+                    </div>
+                </div>
+
+                <p id="detailDescription" class="detail-description"></p>
+
+                <!-- Recently Viewed -->
+                <div class="recently-viewed">
+                    <h3>Recently Viewed</h3>
+                    <div class="viewed-grid" id="viewedGrid">
+                        <!-- Will be populated -->
+                    </div>
+                </div>
+
+                <!-- Price and Add to Cart -->
+                <div class="detail-footer">
+                    <div class="price">
+                        <span id="detailPrice"></span>
+                    </div>
+                    <button class="add-to-cart-btn" id="addToCartBtn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-btn active" data-page="menu">
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+        </button>
+        <button class="nav-btn" data-page="wishlist">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+        </button>
+        <button class="nav-btn" data-page="orders">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Orders</span>
+        </button>
+        <button class="nav-btn" data-page="profile">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
